@@ -1,0 +1,27 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nmn-research-data"
+version = "1.0.0"
+description = "Open datasets on NMN (nicotinamide mononucleotide): published human trials and UK retail prices. Maintained by the RGENR8 Longevity Data Lab."
+readme = "README.md"
+license = "MIT AND CC-BY-4.0"
+requires-python = ">=3.8"
+authors = [{ name = "RGENR8 Longevity Data Lab", email = "support@rgenr8.com" }]
+keywords = ["nmn", "nicotinamide mononucleotide", "nad", "longevity", "clinical trials", "open data", "dataset"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+
+[project.urls]
+Homepage = "https://rgenr8.com/research"
+Documentation = "https://rgenr8.com/research"
+"Human trials dataset" = "https://rgenr8.com/research/nmn-human-trials"
+"UK price index" = "https://rgenr8.com/research/nmn-price-index"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nmn_research_data"]

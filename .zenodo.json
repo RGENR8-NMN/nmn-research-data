@@ -1,0 +1,14 @@
+{
+  "title": "NMN Research Data: published human trials of oral NMN and the UK NMN Price Index",
+  "upload_type": "dataset",
+  "description": "<p>Two open datasets maintained by the RGENR8 Longevity Data Lab.</p><p><strong>NMN human trials:</strong> every published human clinical trial of oral nicotinamide mononucleotide we could verify against PubMed, with design, sample size, daily dose, duration, outcomes measured and the authors' reported result.</p><p><strong>UK NMN Price Index 2026:</strong> 51 NMN products sold to UK buyers, with price per gram and per 500 mg, testing and COA availability.</p><p>Canonical home, methodology and changelog: <a href=\"https://rgenr8.com/research\">https://rgenr8.com/research</a></p>",
+  "creators": [{ "name": "RGENR8 Longevity Data Lab" }],
+  "license": "cc-by-4.0",
+  "keywords": ["NMN", "nicotinamide mononucleotide", "clinical trials", "NAD+", "supplement prices", "open data"],
+  "related_identifiers": [
+    { "identifier": "https://rgenr8.com/research", "relation": "isDocumentedBy", "resource_type": "dataset" },
+    { "identifier": "https://rgenr8.com/research/nmn-human-trials", "relation": "isIdenticalTo", "resource_type": "dataset" },
+    { "identifier": "https://rgenr8.com/research/nmn-price-index", "relation": "isIdenticalTo", "resource_type": "dataset" }
+  ],
+  "version": "1.0.0"
+}

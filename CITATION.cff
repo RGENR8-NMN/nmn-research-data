@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use these datasets, please cite them as below."
+title: "NMN Research Data: human trials and UK price index"
+type: dataset
+version: 1.0.0
+date-released: 2026-10-10
+license: CC-BY-4.0
+url: "https://rgenr8.com/research"
+authors:
+  - name: "RGENR8 Longevity Data Lab"
+    website: "https://rgenr8.com/research"
+keywords:
+  - NMN
+  - nicotinamide mononucleotide
+  - clinical trials
+  - supplement prices
+  - open data

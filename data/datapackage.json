@@ -1,0 +1,346 @@
+{
+  "profile": "data-package",
+  "name": "rgenr8-longevity-data-lab",
+  "title": "RGENR8 Longevity Data Lab",
+  "version": "1.0.0",
+  "created": "2026-10-10T00:00:00Z",
+  "description": "Open datasets on NMN (nicotinamide mononucleotide) from the RGENR8 Longevity Data Lab. Attribution required: credit \"RGENR8 Longevity Data Lab\" and link to https://rgenr8.com/research.",
+  "homepage": "https://rgenr8.com/research",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "RGENR8 Longevity Data Lab",
+      "path": "https://rgenr8.com/research",
+      "role": "author"
+    }
+  ],
+  "keywords": [
+    "NMN",
+    "nicotinamide mononucleotide",
+    "clinical trials",
+    "price index",
+    "United Kingdom"
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "nmn-human-trials",
+      "title": "NMN Human Trials Dataset",
+      "path": "nmn-human-trials.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://rgenr8.com/research/nmn-human-trials",
+      "description": "Published human clinical trials of oral NMN, each checked against PubMed or the DOI record on 2026-10-10.",
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://creativecommons.org/licenses/by/4.0/",
+          "title": "Creative Commons Attribution 4.0"
+        }
+      ],
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Stable row identifier (first author and year)"
+          },
+          {
+            "name": "title",
+            "type": "string",
+            "description": "Article title as indexed in PubMed (or the publisher record)"
+          },
+          {
+            "name": "first_author",
+            "type": "string",
+            "description": "First author surname and initials"
+          },
+          {
+            "name": "year",
+            "type": "integer",
+            "description": "Publication year of the journal issue"
+          },
+          {
+            "name": "journal",
+            "type": "string",
+            "description": "Journal name"
+          },
+          {
+            "name": "doi",
+            "type": "string",
+            "description": "Digital Object Identifier"
+          },
+          {
+            "name": "pmid",
+            "type": "string",
+            "description": "PubMed ID (blank if not indexed in PubMed)"
+          },
+          {
+            "name": "country",
+            "type": "string",
+            "description": "Country where the trial was run"
+          },
+          {
+            "name": "design",
+            "type": "string",
+            "description": "Study design as reported"
+          },
+          {
+            "name": "randomised",
+            "type": "string",
+            "description": "Yes, No or Not stated"
+          },
+          {
+            "name": "placebo_controlled",
+            "type": "string",
+            "description": "Yes if any arm received placebo"
+          },
+          {
+            "name": "blinded",
+            "type": "string",
+            "description": "Blinding as reported"
+          },
+          {
+            "name": "n_randomised",
+            "type": "integer",
+            "description": "Participants randomised (blank if not randomised or not reported)"
+          },
+          {
+            "name": "n_participants",
+            "type": "integer",
+            "description": "Participants enrolled, all arms including comparators"
+          },
+          {
+            "name": "population",
+            "type": "string",
+            "description": "Who took part"
+          },
+          {
+            "name": "age_range",
+            "type": "string",
+            "description": "Age range or summary as reported (eligibility range where stated)"
+          },
+          {
+            "name": "daily_dose_mg",
+            "type": "string",
+            "description": "NMN dose arms in mg per day, separated by semicolons"
+          },
+          {
+            "name": "dose_min_mg",
+            "type": "integer",
+            "description": "Lowest NMN dose arm, mg per day"
+          },
+          {
+            "name": "dose_max_mg",
+            "type": "integer",
+            "description": "Highest NMN dose arm, mg per day"
+          },
+          {
+            "name": "duration_weeks",
+            "type": "number",
+            "description": "Length of dosing in weeks (blank for single-dose studies; days divided by 7)"
+          },
+          {
+            "name": "duration_text",
+            "type": "string",
+            "description": "Length of dosing as reported"
+          },
+          {
+            "name": "comparator",
+            "type": "string",
+            "description": "What NMN was compared with"
+          },
+          {
+            "name": "primary_outcomes_measured",
+            "type": "string",
+            "description": "Primary outcome(s) as stated by the authors"
+          },
+          {
+            "name": "authors_reported_result",
+            "type": "string",
+            "description": "Neutral paraphrase of the authors' reported results, including null findings"
+          },
+          {
+            "name": "funding_or_conflicts",
+            "type": "string",
+            "description": "Funding sources and conflicts of interest as stated in the paper or record"
+          },
+          {
+            "name": "registration",
+            "type": "string",
+            "description": "Trial registry identifier(s) where reported"
+          },
+          {
+            "name": "route",
+            "type": "string",
+            "description": "Route of administration"
+          },
+          {
+            "name": "verified_from",
+            "type": "string",
+            "description": "Sources used to check the row"
+          },
+          {
+            "name": "pubmed_url",
+            "type": "string",
+            "description": "PubMed link"
+          },
+          {
+            "name": "doi_url",
+            "type": "string",
+            "description": "DOI link"
+          },
+          {
+            "name": "date_checked",
+            "type": "date",
+            "description": "Date the row was checked (ISO 8601)"
+          }
+        ],
+        "primaryKey": "id",
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "profile": "data-resource",
+      "name": "nmn-human-trials-json",
+      "title": "NMN Human Trials Dataset (JSON)",
+      "path": "nmn-human-trials.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8",
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://creativecommons.org/licenses/by/4.0/",
+          "title": "Creative Commons Attribution 4.0"
+        }
+      ]
+    },
+    {
+      "profile": "tabular-data-resource",
+      "name": "nmn-price-index-2026",
+      "title": "The UK NMN Price Index 2026",
+      "path": "nmn-price-index-2026.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "homepage": "https://rgenr8.com/research/nmn-price-index",
+      "description": "Standard prices of NMN products sold in the UK, checked 2026-10-10, with price per gram of NMN.",
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://creativecommons.org/licenses/by/4.0/",
+          "title": "Creative Commons Attribution 4.0"
+        }
+      ],
+      "schema": {
+        "fields": [
+          {
+            "name": "brand",
+            "type": "string"
+          },
+          {
+            "name": "product",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string"
+          },
+          {
+            "name": "format",
+            "type": "string"
+          },
+          {
+            "name": "mg_nmn_per_serving",
+            "type": "number"
+          },
+          {
+            "name": "servings_per_pack",
+            "type": "number"
+          },
+          {
+            "name": "nmn_grams_per_pack",
+            "type": "number"
+          },
+          {
+            "name": "price_gbp",
+            "type": "number"
+          },
+          {
+            "name": "subscription_price_gbp",
+            "type": "string"
+          },
+          {
+            "name": "price_per_gram_gbp",
+            "type": "number"
+          },
+          {
+            "name": "price_per_500mg_gbp",
+            "type": "number"
+          },
+          {
+            "name": "other_actives",
+            "type": "string"
+          },
+          {
+            "name": "stated_purity",
+            "type": "string"
+          },
+          {
+            "name": "third_party_testing_public",
+            "type": "string"
+          },
+          {
+            "name": "coa_available",
+            "type": "string"
+          },
+          {
+            "name": "country_of_manufacture",
+            "type": "string"
+          },
+          {
+            "name": "ships_from",
+            "type": "string"
+          },
+          {
+            "name": "notes",
+            "type": "string"
+          },
+          {
+            "name": "date_checked",
+            "type": "date"
+          }
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "profile": "data-resource",
+      "name": "nmn-price-index-2026-json",
+      "title": "The UK NMN Price Index 2026 (JSON)",
+      "path": "nmn-price-index-2026.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8",
+      "licenses": [
+        {
+          "name": "CC-BY-4.0",
+          "path": "https://creativecommons.org/licenses/by/4.0/",
+          "title": "Creative Commons Attribution 4.0"
+        }
+      ]
+    }
+  ]
+}
