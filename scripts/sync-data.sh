@@ -9,4 +9,8 @@ done
 mkdir -p "$here/src/nmn_research_data/data"
 cp "$here/data/"*.json "$here/src/nmn_research_data/data/"
 rm -f "$here/src/nmn_research_data/data/datapackage.json"
+for d in "$here/rust/data" "$here/go/nmndata/data"; do
+  mkdir -p "$d"
+  cp "$here/data/nmn-human-trials.json" "$here/data/nmn-price-index-2026.json" "$d/"
+done
 echo "synced from $site"

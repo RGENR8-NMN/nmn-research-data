@@ -1,0 +1,26 @@
+[package]
+name = "nmn-data"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.70"
+description = "Typed, embedded open datasets on NMN (nicotinamide mononucleotide): 25 published human trials and the UK NMN Price Index 2026, from the RGENR8 Longevity Data Lab."
+license = "MIT AND CC-BY-4.0"
+authors = ["RGENR8 Longevity Data Lab <support@rgenr8.com>"]
+homepage = "https://rgenr8.com/research"
+documentation = "https://docs.rs/nmn-data"
+repository = "https://github.com/RGENR8-NMN/nmn-research-data"
+readme = "README.md"
+keywords = ["nmn", "dataset", "clinical-trials", "open-data", "longevity"]
+categories = ["science", "data-structures"]
+include = [
+    "src/**/*.rs",
+    "data/*.json",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE-MIT",
+    "LICENSE-DATA",
+]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"

@@ -39,6 +39,51 @@ nrd.trials_by_dose(250)    # trials testing 250 mg/day in at least one arm
 nrd.cheapest_per_gram(5)   # UK price index, cheapest first
 ```
 
+## Rust
+
+Crate [`nmn-data`](https://crates.io/crates/nmn-data), source in `rust/`. The JSON is embedded at compile time.
+
+```toml
+[dependencies]
+nmn-data = "1"
+```
+
+```rust
+let trials = nmn_data::human_trials();          // &'static [Trial], typed
+let rcts = nmn_data::randomised_trials();
+let y2023 = nmn_data::trials_by_year(2023);
+let at_250 = nmn_data::trials_by_dose(250.0);    // tested 250 mg/day in at least one arm
+let cheap = nmn_data::cheapest_per_gram(5);      // UK price index, cheapest first
+
+// Price normalisation: 60 x 500 mg capsules for 39.99 GBP
+let per_gram = nmn_data::price_per_gram(39.99, 500.0, 60.0);      // about 1.33
+let per_day = nmn_data::cost_per_day(39.99, 500.0, 60.0, 500.0);  // about 0.67
+```
+
+Docs: https://docs.rs/nmn-data
+
+## Go
+
+Module `github.com/RGENR8-NMN/nmn-research-data/go`, package `nmndata` in `go/nmndata/`. The JSON is embedded with `go:embed`.
+
+```bash
+go get github.com/RGENR8-NMN/nmn-research-data/go
+```
+
+```go
+import "github.com/RGENR8-NMN/nmn-research-data/go/nmndata"
+
+trials := nmndata.HumanTrials()
+rcts := nmndata.RandomisedTrials()
+y2023 := nmndata.TrialsByYear(2023)
+at250 := nmndata.TrialsByDose(250)
+cheap := nmndata.CheapestPerGram(5)
+perGram := nmndata.PricePerGram(39.99, 500, 60)    // about 1.33 GBP per gram
+perDay := nmndata.CostPerDay(39.99, 500, 60, 500)  // about 0.67 GBP per day
+```
+
+Docs: https://pkg.go.dev/github.com/RGENR8-NMN/nmn-research-data/go/nmndata
+
 ## Licence and citation
 
 Data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code: MIT.
@@ -51,4 +96,4 @@ Citation metadata is in `CITATION.cff`. Corrections and new trials: open an issu
 
 ## Updating
 
-The canonical data lives on rgenr8.com. `scripts/sync-data.sh` copies it into this package.
+The canonical data lives on rgenr8.com. `scripts/sync-data.sh` copies it into the Python, Rust and Go packages.
