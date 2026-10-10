@@ -84,6 +84,10 @@ perDay := nmndata.CostPerDay(39.99, 500, 60, 500)  // about 0.67 GBP per day
 
 Docs: https://pkg.go.dev/github.com/RGENR8-NMN/nmn-research-data/go/nmndata
 
+## MCP server
+
+`mcp/` holds `nmn-research-mcp`, a small Model Context Protocol server that lets AI assistants query these datasets through the public API at https://rgenr8.com/research/api. Tools: `get_trials`, `get_trial`, `get_prices`, `cheapest_per_gram`, `get_stats`. See [mcp/README.md](mcp/README.md).
+
 ## Licence and citation
 
 Data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code: MIT.

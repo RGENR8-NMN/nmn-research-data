@@ -1,0 +1,24 @@
+{
+  "name": "nmn-research-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for the RGENR8 Longevity Data Lab: published human trials of oral NMN and the UK NMN Price Index (CC BY 4.0).",
+  "type": "module",
+  "bin": { "nmn-research-mcp": "index.js" },
+  "main": "index.js",
+  "files": ["index.js", "data/", "README.md", "LICENSE"],
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test.mjs",
+    "sync-data": "node scripts/sync-data.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "keywords": ["mcp", "model-context-protocol", "nmn", "nicotinamide-mononucleotide", "open-data", "clinical-trials", "prices"],
+  "homepage": "https://rgenr8.com/research/api",
+  "repository": { "type": "git", "url": "git+https://github.com/RGENR8-NMN/nmn-research-data.git", "directory": "mcp" },
+  "license": "MIT",
+  "author": "RGENR8 Longevity Data Lab (https://rgenr8.com/research)",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.0.0"
+  }
+}
