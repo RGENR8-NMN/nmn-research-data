@@ -5,6 +5,7 @@ type: dataset
 version: 1.0.0
 date-released: 2026-10-10
 license: CC-BY-4.0
+doi: 10.5281/zenodo.23285128
 url: "https://rgenr8.com/research"
 authors:
   - name: "RGENR8 Longevity Data Lab"

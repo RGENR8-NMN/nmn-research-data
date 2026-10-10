@@ -1,5 +1,7 @@
 # nmn-research-data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23285128.svg)](https://doi.org/10.5281/zenodo.23285128)
+
 Open datasets on NMN (nicotinamide mononucleotide), maintained by the [RGENR8 Longevity Data Lab](https://rgenr8.com/research).
 
 | Dataset | Rows | Files | Canonical page |
@@ -43,7 +45,7 @@ Data: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Code: MIT.
 
 Attribution: **RGENR8 Longevity Data Lab, https://rgenr8.com/research**
 
-> RGENR8 Longevity Data Lab (2026). NMN Research Data: human trials and UK price index (v1.0.0). https://rgenr8.com/research
+> RGENR8 Longevity Data Lab (2026). NMN Research Data: human trials and UK price index (v1.0.0). https://doi.org/10.5281/zenodo.23285128
 
 Citation metadata is in `CITATION.cff`. Corrections and new trials: open an issue, or email support@rgenr8.com.
 
